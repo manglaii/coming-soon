@@ -251,7 +251,7 @@ if ( $("#marshall-form").is_exist() ) {
   var mform = $("#marshall-form");
   mform.ajaxChimp({
       callback: callbackFunction,
-      url: 'https://uglexchange.us18.list-manage.com/subscribe/post?u=ae0e164b8a73dbef17e355ce8&amp;id=cd7c1d2dd7'
+      url: 'https://uglexchange.us18.list-manage.com/subscribe/post?u=ae0e164b8a73dbef17e355ce8&amp;id=742970cda1'
   });
   function callbackFunction (resp) {
       if (resp.result === 'success') {
