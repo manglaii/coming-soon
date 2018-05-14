@@ -72,7 +72,7 @@ if ( $("#countdown_text_layout").is_exist() ) {
   simplyCountdown('#countdown_text_layout', {
       year: 2018,
       month: 6,
-      day: 1,
+      day: 8,
       inline: true,
       words: {
           days: 'days',
