@@ -71,12 +71,13 @@
 		<div class="marshall-col-6 marshall-col-screen">
 			<div id="marshall-animate-area" data-hide="mrs-scaleDown" class="marshall-single-fit-thumb marshall-animate-content marshall-animate-content mrs-active marshall-fit-column">
 				
-						<video autoplay muted loop id="myVideo">
-  <source src="mp4/video.mp4" type="video/mp4">
-</video>
-	
-				
-				<div class="inner-content css-center">
+						
+	<div class="video-responsive">
+			<video class="video" muted="muted" loop="loop" autoplay="autoplay">
+				<source src="mp4/video.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+			</video>
+	<div class="inner-content css-center">
 			
 					<h2 class="single_large_title big_title">Trading in</h2>
 					<h2 class="single_large_title" id="countdown_text_layout"></h2>
@@ -86,10 +87,16 @@
 						<form id="marshall-form" class="marshall-newsletter-content">
 							<input id="marshall-email" type="email" placeholder="Your Email">
 							<button class="marshall_submit" type="submit">Subscribe</button>
-							<label for="marshall-email"></label>
+							<label for="UGL-email"></label>
 						</form>
 					</div>
 				</div>
+			
+		</div>
+	
+	
+				
+			
 			</div>
 		</div>
 	</div>
@@ -202,9 +209,37 @@ We’re equipped with cutting-edge technology and high level of client support, 
 	<script src="js/form-init.js"></script>
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script src="js/jquery.textarea_autosize.js"></script>
+	
+	<script src="js/canvas-video-player.js"></script>
 	<script type="text/javascript" src="js/v2/triangles.js"></script>
 	<script type="text/javascript" src="js/v2/simplyCountdown.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	
+	
+	<script>
+	
+	var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+	
+	if (isIOS) {
+ 
+		var canvasVideo = new CanvasVideoPlayer({
+			videoSelector: '.video',
+			canvasSelector: '.canvas',
+			timelineSelector: false,
+			autoplay: true,
+			makeLoop: true,
+			pauseOnClick: false,
+			audio: false
+		});
+		
+	}else {
+		
+		// Use HTML5 video
+		document.querySelectorAll('.canvas')[0].style.display = 'none';
+		
+	}	
+	
+	</script>
 	
 </body>
 </html>
